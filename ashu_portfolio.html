@@ -69,23 +69,28 @@
                     </div>
                     <div class="tab-contents active-tab " id="skills">
                         <ul>
-                            <li><span>Programing Languages</span><br>Python,C,C++</li>
-                            <li><span>DataBase</span><br>MySQL,Postgres,MongoDB</li>
-                            <li><span>Fornt end technologies</span><br>HTML,CSS,JavaScript</li>
+                            <li><span>Programing Languages</span><br>Python,Django,C,C++</li>
+                            <li><span>DataBase</span><br>MySQL,Postgres,MongoDB,NoSQL</li>
+                            <li><span>Fornt end technologies</span><br>HTML,CSS,JavaScript,BootStrap</li>
+                            <li><span>Cloud Servies</span><br>Microsoft Azure</li>
+                            
+
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>Post Graduate Diploma</span><br>System Developer Python & IT Security</li>
-                            <li><span>Masters in Technology/</span><br>Computer Science</li>
-                            <li><span>Bachelor of Engineering/</span><br>Computer Science & Engg.</li>
+                            <li><span>Post Graduate Diploma</span><br>System Developer Python & IT Security<br>Mar 2024 - Nov 2024</li>
+                            <li><span>Nano Dgree</span><br>SQL,RDBMS<br>2020 - Mar 2021</li>
+                            <li><span>Masters in Technology/</span><br>Computer Science<br>2007 - 2009</li>
+                            <li><span>Bachelor of Engineering/</span><br>Computer Science & Engg.<br>2000 - 2003</li>
+                           
                         </ul>
                     </div>
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>Programing Languages</span><br>Python,C,C++</li>
-                            <li><span>DataBase</span><br>MySQL,Postgres,MongoDB</li>
-                            <li><span>Fornt end technologies</span><br>HTML,CSS,JavaScript</li>
+                            <li><span>College Lecturer</span><br>HRM Institute of Technology & Management,New Delhi<br>Jul 2006 - Dec 2007</li>
+                            <li><span>College Lecturer,Computer Dpt.</span><br>DAV College of Engineering & Technology,India<br>Mar 2005 - Mar 2006</li>
+                            <li><span>College Lecturer,Computer Dpt.</span><br>CHAUDHARY DEVI LAL MEMORIAL COLLEGE,India<br>Mar 2004 - Feb 2005 </li>
                         </ul>
                     </div>
                 </div>
@@ -95,31 +100,32 @@
     <!------------------ Project  Section------------------>
     <div id="projects">
         <div class="container">
-            <h1 class="sub-title">My Projects</h1>
+            <h1>My Projects</h1>
             <div class="project_list">
                 <div class="project">
-                    <img src="images/dice-rolling.jpg">
-                    <div class="layer">
-                        <h3>Project Title</h3>
-                        <p>Project Description</p>
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
-                    </div>
+                    <img src="images/online_store.webp">
+                    <h3>Online Clothing Store</h3>
+                    <p>Python-Dajngo project</p>
+                    <a href="#"><i class="fa-solid fa-link" style="color: red;"></i></a>
+                    
                 </div>
                 <div class="project">
                     <img src="images/project3.png">
-                    <div class="layer">
+                    <h3>Online BookStore</h3>
+                    <p>Python-Dajngo project using HTML,CSS,JavaScript</p>
+                    <a href="https://github.com/AshuSurana/Book_Store"><i class="fa-solid fa-link" style="color: red;"></i></a>
+                    <!--<div class="layer">
                         <h3>Project Title</h3>
                         <p>Project Description</p>
                         <a href="#"><i class="fa-solid fa-link"></i></a>
-                    </div>
+                    </div>  -->
                 </div>
                 <div class="project">
                     <img src="images/Python-Project-Rock-Paper-Scissor-Game.jpg">
-                    <div class="layer">
-                        <h3>Project Title</h3>
-                        <p>Project Description</p>
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
-                    </div>
+                    <h3>Rock-Paper-Scissor Game</h3>
+                    <p>Online game using Python</p>
+                    <a href="https://github.com/AshuSurana/Rock_Sicor_Paper"><i class="fa-solid fa-link" style="color: red;"></i></a>
+                    
                 </div>
             </div>
         </div>
@@ -134,21 +140,21 @@
                     <p><i class="fa-solid fa-paper-plane"></i> surana.ashu@gmail.com</p>
                     <p><i class="fa-solid fa-phone"></i> 0123456789</p>
                     <div class="social-icon">
-                        <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.facebook.com/ashu.surana"><i class="fa-brands fa-square-facebook"></i></a>
                         <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href=""><i class="fa-brands fa-square-git"></i></a>
+                        <a href="https://github.com/AshuSurana"><i class="fa-brands fa-square-git"></i></a>
                         
                     </div>
                     <a href="images/my_cv.docx.pdf" class="btn btn2">Download CV</a>
 
                 </div>
                 <div class="contact-right">
-                    <form>
+                    <form id="emailForm" action="mailto:surana.ashu@gmail.com" method="post" enctype="text/plain">
                         <label>Lets get in touch</label>
                         <input type="text" name="name" placeholder="Name" required>
                         <input type="email" name="email" placeholder="Email address" required>
                         <textarea name="mesage"rows="6" placeholder="Message"></textarea>
-                        <button class="btn btn2">Submit</button>
+                        <button  type="submit" value="Send Email" class="btn btn2">Submit</button>
                     </form>
 
                 </div>
@@ -159,6 +165,17 @@
     <div class="copyright">
         <p>Copyright @2024 | All rights reserved | Ashu Surana </p>
     </div>
+    <script>
+        function clearForm() {
+            document.getElementById("emailForm").reset();
+        }
+
+        // Attach the clearForm function to the form submission event
+        document.getElementById("emailForm").onsubmit = function() {
+            setTimeout(clearForm, 0);  // Delay clearing form slightly to allow mailto action
+            return true;  // Allow form submission to continue
+        };
+    </script>
     
 </body>
 </html>
